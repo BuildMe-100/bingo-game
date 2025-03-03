@@ -1,6 +1,6 @@
 // Google Sheets API configuration
-const API_KEY = 'YOUR_API_KEY'; // You'll replace this with your actual API key
-const SHEET_ID = 'YOUR_SHEET_ID'; // Replace with your Google Sheet ID
+const API_KEY = 'AIzaSyDUHlJD57gRFnV0-HdMhGGBsNEyLhwUJUA'; // You'll replace this with your actual API key
+const SHEET_ID = '1OiEgX6igFaUvieh3sR3tn2TjjfOhzeeYdTAX_H4McrU'; // Replace with your Google Sheet ID
 const RANGE = 'A:D'; // The range we'll use in our sheet
 
 // Game state variables
