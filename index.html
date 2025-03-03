@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Sheets API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Bingo Game</h1>
+        
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="game-section">
+            <h2>Welcome to Bingo!</h2>
+            <div class="button-container">
+                <button id="newGameBtn" class="primary-btn">Start New Game</button>
+                <div class="continue-game">
+                    <input type="text" id="gameIdInput" placeholder="Enter Game ID">
+                    <button id="continueGameBtn">Continue Game</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-section hidden">
+            <div class="game-info">
+                <div class="game-id">
+                    <span>Game ID: </span>
+                    <span id="currentGameId" class="highlight"></span>
+                    <button id="copyGameId" class="small-btn">Copy</button>
+                </div>
+                <p class="save-note">Save this ID to continue your game later</p>
+            </div>
+            
+            <div class="called-numbers-container">
+                <h2>Called Numbers (<span id="numberCount">0</span>):</h2>
+                <div id="calledNumbersDisplay" class="called-numbers"></div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="callNumberBtn" class="action-btn">Call Number</button>
+                <button id="bingoBtn" class="action-btn bingo-btn">Bingo!</button>
+            </div>
+            
+            <button id="restartBtn" class="secondary-btn">Restart Game</button>
+            
+            <div id="messageBox" class="message-box hidden"></div>
+        </div>
+        
+        <!-- Bingo Verification Screen -->
+        <div id="bingoScreen" class="game-section hidden">
+            <h2>Bingo Verification</h2>
+            <p>Enter your winning numbers (e.g., B-4, I-17, N-33, G-52, O-69):</p>
+            <textarea id="winningNumbers" placeholder="B-4, I-17, N-33, G-52, O-69"></textarea>
+            
+            <div class="button-container">
+                <button id="verifyBingoBtn" class="primary-btn">Verify Bingo</button>
+                <button id="backToGameBtn" class="secondary-btn">Back to Game</button>
+            </div>
+            
+            <div id="bingoResult" class="result-box hidden"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
